@@ -1,0 +1,52 @@
+@import "../../assets/style/index.scss";
+
+.header {
+	display: block;
+	background-color: $bg;
+	padding: 12px;
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: inline-block;
+
+		img {
+			display: inline-block;
+			width: 168px;
+			height: auto;
+		}
+	}
+}
+
+.login-block {
+	display: inline-flex;
+	align-items: center;
+
+	&__user-name {
+		display: inline-block;
+		margin-right: 8px;
+		color: $white;
+	}
+
+	&__log-out {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+
+		img,
+		svg {
+			display: inline-block;
+			width: 24px;
+			height: auto;
+		}
+	}
+}

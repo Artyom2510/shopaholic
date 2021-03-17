@@ -1,0 +1,9 @@
+.goods-list {
+	display: block;
+	max-width: 285px;
+
+	&__item {
+		position: relative;
+		margin-bottom: 24px;
+	}
+}

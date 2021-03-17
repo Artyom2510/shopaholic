@@ -1,0 +1,28 @@
+{
+	"goods": [
+		{
+			"id": 1,
+			"type": "group1",
+			"naming": "Goods1",
+			"isLiked": false,
+			"price": "20",
+			"imgUrl": "img/content/1.jpg"
+		},
+		{
+			"id": 2,
+			"type": "group1",
+			"naming": "Goods2",
+			"isLiked": false,
+			"price": "10",
+			"imgUrl": "img/content/2.jpg"
+		},
+		{
+			"id": 3,
+			"type": "group2",
+			"naming": "Goods3",
+			"isLiked": false,
+			"price": "100",
+			"imgUrl": "img/content/3.jpg"
+		}
+	]
+}

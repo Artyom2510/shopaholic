@@ -1,0 +1,47 @@
+// Общие настройки
+$url-img: "../img"; // Путь к изображениям
+$url-font: "../fonts"; // Путь к шрифтам
+$url-img-libs: "../" + $url-img; // Путь к изображениям (для библиотек)
+$url-font-libs: "../" + $url-font; // Путь к шрифтам (для библиотек)
+
+// Переменные цветов
+$bg-grad: radial-gradient(114% 114% at 50% 20.77%, #0a0049 0%, #350320 100%);
+$grad: linear-gradient(90deg, #7320ba 0%, #7320ba 32%, #3dbeef 99.8%);
+$grad2: linear-gradient(90deg, #7320ba 0%, #3dbeef 99.8%);
+$grad3: linear-gradient(180deg, #7320ba 0%, #3dbeef 99.8%);
+$ac: #aa0ead;
+$ac2: #8f018a;
+$orange: #e38800;
+$ac-border: #8800db;
+$bg: #0e0e10;
+$bg-gray: #18181b;
+$text: #939393;
+$white: #fff;
+$error: #e44d4d;
+$health-ok: #ff0e1f;
+$health-lose: #babfc2;
+
+$xl: 1449.98px;
+$md: 981.98px;
+$sm-xs: 640px;
+
+// Настройки брэкпоинтов (+25 для полосы прокрутки на десктопах)
+// prettier-ignore
+$breakpoints: (
+	xs: 0,
+	sm: 768px,
+	lg: 1279px
+) !default;
+
+// Настройки контейнера
+// prettier-ignore
+$max-widths: (
+	xs: 100%,
+	sm: 100%,
+	lg: 984px
+) !default;
+
+$grid-gutter-width: 20px !default; // Отступ между колонками ( сумма падингов одной колонки )
+$grid-columns: 12 !default; // Количество колонок
+
+@import "~sass-snippets/scss/snippets";
