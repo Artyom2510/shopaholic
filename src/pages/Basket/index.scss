@@ -1,0 +1,47 @@
+@import "../../assets/style/index.scss";
+
+.basket-table {
+	width: 100%;
+	background-color: $white;
+	border-collapse: collapse;
+}
+
+.table-head {
+	background-color: $ac2;
+
+	&__name {
+		width: 25%;
+		height: 48px;
+		padding: 0 12px;
+
+		&:not(:first-child) {
+			text-align: center;
+		}
+	}
+}
+
+.basket-footer {
+	display: flex;
+	justify-content: flex-end;
+	padding: 12px;
+	border-top: 1px solid $ac-border;
+	background-color: $white;
+
+	&__btn {
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+}
+
+.basket-order {
+	display: inline-block;
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid $bg-gray;
+	background-color: $orange;
+
+	&_reset {
+		background-color: $error;
+	}
+}

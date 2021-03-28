@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+import Button from "@material-ui/core/Button";
 
 import styles from './index.module.scss';
 
@@ -26,19 +27,28 @@ const Card = ({
 				<img src={imgUrl} alt={naming} className={styles.GoodsListItem__img} />
 			</div>
 			<span className={styles.GoodsListItem__badge}>{type}</span>
-			<button
+			{/* <button
 				className={styles.GoodsListItem__like}
 				onClick={() => {
 					toggleLike(id);
 				}}
 			>
 				<Like />
-			</button>
+			</button> */}
+			<Button
+				className={styles.GoodsListItem__like}
+				onClick={() => {
+					toggleLike(id);
+				}}>
+				<Like />
+			</Button>
 			<div className={styles.GoodsListItem__footer}>
-				<span className={styles.GoodsListItem__price}>{price}$</span>
+				<span className={styles.GoodsListItem__price}>
+					{`${price.toLocaleString('ru-RU')} `}₽
+				</span>
 				<button
 					className={cn(styles.GoodsListItem__add, styles.link)}
-					onClick={() => handleBasked(id, 1)}
+					onClick={() => handleBasked(id, 1, price)}
 				>
 					В корзину
 				</button>

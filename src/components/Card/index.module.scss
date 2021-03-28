@@ -3,7 +3,12 @@
 .GoodsListItem {
 	$p: &;
 	display: block;
+	width: calc(33.33% - 12px);
 	background-color: $orange;
+
+	&:nth-child(3n + 2) {
+		width: calc(33.34% - 12px);
+	}
 
 	&__wrapImg {
 		position: relative;
@@ -50,17 +55,24 @@
 	}
 
 	&__like {
-		position: absolute;
+		position: absolute !important;
 		top: 16px;
 		right: 16px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
+		min-width: 50px !important;
 		height: 50px;
-		padding: 0;
+		padding: 0 !important;
 		border: none;
 		background-color: transparent;
+
+		svg {
+			rect {
+				transition: fill 0.2s ease;
+			}
+		}
 	}
 
 	&__footer {
@@ -71,10 +83,15 @@
 
 	&_liked {
 		#{$p}__like {
-			background-color: $bg;
+			svg {
+				rect {
+					fill: $health-ok;
+				}
+			}
 		}
 	}
 }
+
 .link {
 	color: #ff0000;
 }

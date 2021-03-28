@@ -50,3 +50,16 @@
 		}
 	}
 }
+
+.header-nav {
+	display: flex;
+
+	&__item {
+		display: inline-block;
+		margin-right: 12px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -11,6 +11,7 @@ import {
 import Header from '../Header';
 import Home from '../../pages/Home';
 import Basket from '../../pages/Basket';
+import LikedGoods from '../../pages/LikedGoods';
 // import LoginForm from './components/LoginForm';
 // import News from './pages/News';
 // import { modalClose } from './store/actions';
@@ -36,6 +37,7 @@ const App = () => {
 				<Switch>
 					<Route exact path='/' component={Home} />
 					<Route path='/basket' component={Basket} />
+					<Route path='/liked' component={LikedGoods} />
 					<Redirect from='*' to='/' />
 				</Switch>
 			</main>

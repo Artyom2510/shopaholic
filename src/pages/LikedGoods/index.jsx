@@ -1,19 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Card from '../../components/Card';
-import { loadGoods, selectGoods, likeGood } from '../../reducers/goodsSlice';
+import { selectGoods, likeGood } from '../../reducers/goodsSlice';
 import { addToBasked } from '../../reducers/basketSlice';
 
 import './index.scss';
 
-const Home = () => {
+const LikeGoods = () => {
 	const dispatch = useDispatch();
 	const goods = useSelector(selectGoods);
 
-	useEffect(() => {
-		dispatch(loadGoods());
-	}, []);
+	const [goodsLikedRender, setGoodsLikedRender] = useState([]);
+
+	useMemo(() => {
+		setGoodsLikedRender(
+			Object.keys(goods.data)
+				.map(good => goods.data[good])
+				.filter(good => good.isLiked)
+		);
+	}, [goods.data]);
 
 	const toggleLike = id => {
 		dispatch(likeGood(id));
@@ -31,18 +37,18 @@ const Home = () => {
 						<h1>Hello User</h1>
 						{goods.isLoading ? (
 							<p>Загрузка...</p>
-						) : Object.keys(goods.data).length ? (
+						) : goodsLikedRender.length ? (
 							<>
-								<h3>Покупай-налетай</h3>
+								<h3>Понравившиеся товары</h3>
 								<ul className='goods__list goods-list'>
-									{Object.keys(goods.data).map(key => {
+									{goodsLikedRender.map(item => {
 										return (
 											<Card
 												className='goods-list__item'
-												key={key}
+												key={item.id}
 												toggleLike={toggleLike}
 												handleBasked={handleBasked}
-												{...goods.data[key]}
+												{...item}
 											/>
 										);
 									})}
@@ -58,4 +64,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default LikeGoods;

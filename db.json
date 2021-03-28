@@ -5,24 +5,135 @@
 			"type": "group1",
 			"naming": "Goods1",
 			"isLiked": false,
-			"price": "20",
-			"imgUrl": "img/content/1.jpg"
+			"price": 20,
+			"imgUrl": "img/content/1.jpg",
+			"totalCnt": 10
 		},
 		{
 			"id": 2,
 			"type": "group1",
 			"naming": "Goods2",
 			"isLiked": false,
-			"price": "10",
-			"imgUrl": "img/content/2.jpg"
+			"price": 10,
+			"imgUrl": "img/content/2.jpg",
+			"totalCnt": 1
 		},
 		{
 			"id": 3,
 			"type": "group2",
 			"naming": "Goods3",
 			"isLiked": false,
-			"price": "100",
-			"imgUrl": "img/content/3.jpg"
+			"price": 100,
+			"imgUrl": "img/content/3.jpg",
+			"totalCnt": 100
+		},
+		{
+			"id": 4,
+			"type": "group2",
+			"naming": "Goods4",
+			"isLiked": false,
+			"price": 14,
+			"imgUrl": "img/content/4.jpg",
+			"totalCnt": 100
+		},
+		{
+			"id": 5,
+			"type": "group1",
+			"naming": "Goods5",
+			"isLiked": false,
+			"price": 123,
+			"imgUrl": "img/content/5.jpg",
+			"totalCnt": 44
+		},
+		{
+			"id": 6,
+			"type": "group2",
+			"naming": "Goods6",
+			"isLiked": false,
+			"price": 55555,
+			"imgUrl": "img/content/6.jpg",
+			"totalCnt": 4456
+		},
+		{
+			"id": 7,
+			"type": "group1",
+			"naming": "Goods7",
+			"isLiked": false,
+			"price": 345,
+			"imgUrl": "img/content/7.jpg",
+			"totalCnt": 100
+		},
+		{
+			"id": 8,
+			"type": "group2",
+			"naming": "Goods8",
+			"isLiked": false,
+			"price": 9999,
+			"imgUrl": "img/content/8.jpg",
+			"totalCnt": 23
+		},
+		{
+			"id": 9,
+			"type": "group2",
+			"naming": "Goods9",
+			"isLiked": false,
+			"price": 234,
+			"imgUrl": "img/content/1.jpg",
+			"totalCnt": 89
+		},
+		{
+			"id": 10,
+			"type": "group2",
+			"naming": "Goods10",
+			"isLiked": false,
+			"price": 1234,
+			"imgUrl": "img/content/1.jpg",
+			"totalCnt": 125
+		},
+		{
+			"id": 11,
+			"type": "group2",
+			"naming": "Goods11",
+			"isLiked": false,
+			"price": 445556,
+			"imgUrl": "img/content/2.jpg",
+			"totalCnt": 27
+		},
+		{
+			"id": 12,
+			"type": "group2",
+			"naming": "Goods12",
+			"isLiked": false,
+			"price": 23423432,
+			"imgUrl": "img/content/3.jpg",
+			"totalCnt": 55
+		},
+		{
+			"id": 13,
+			"type": "group2",
+			"naming": "Goods13",
+			"isLiked": false,
+			"price": 45555,
+			"imgUrl": "img/content/3.jpg",
+			"totalCnt": 45
+		},
+		{
+			"id": 14,
+			"type": "group2",
+			"naming": "Goods14",
+			"isLiked": false,
+			"price": 45456,
+			"imgUrl": "img/content/5.jpg",
+			"totalCnt": 123
+		},
+		{
+			"id": 15,
+			"type": "group2",
+			"naming": "Goods15",
+			"isLiked": false,
+			"price": 456456,
+			"imgUrl": "img/content/4.jpg",
+			"totalCnt": 124
 		}
 	]
 }

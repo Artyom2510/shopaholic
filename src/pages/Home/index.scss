@@ -1,9 +1,14 @@
 .goods-list {
-	display: block;
-	max-width: 285px;
+	display: flex;
+	flex-wrap: wrap;
 
 	&__item {
 		position: relative;
 		margin-bottom: 24px;
+		margin-right: 18px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
 	}
 }

@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const basketInitialState = {
-	data: {}
+	data: {},
+	totalPrice: 0
 };
 
 export const slice = createSlice({
@@ -10,14 +11,30 @@ export const slice = createSlice({
 	reducers: {
 		updateBasket: (state, { payload }) => {
 			state.data[payload.id] = payload.cnt;
+			state.totalPrice += payload.price;
+		},
+		removeGood: (state, { payload }) => {
+			state.totalPrice -= payload.price;
+			delete state.data[payload.id];
+		},
+		increment: (state, { payload }) => {
+			state.totalPrice += payload;
 		}
 	}
 });
 
-const { updateBasket } = slice.actions;
+const { updateBasket, removeGood } = slice.actions;
 
-export const addToBasked = (id, cnt) => dispatch => {
-	dispatch(updateBasket({ id, cnt }));
+export const addToBasked = (id, cnt, price) => dispatch => {
+	dispatch(updateBasket({ id, cnt, price }));
+};
+
+export const { increment } = slice.actions;
+
+// export const selectCount = state => state.basket.price;
+
+export const removeFromBasked = (id, price) => dispatch => {
+	dispatch(removeGood({ id, price }));
 };
 
 export const selectBasket = state => state.basket;
