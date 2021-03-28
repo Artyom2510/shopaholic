@@ -45,6 +45,9 @@ const Header = () => {
 									<li className='header-nav__item header-nav__item_active'>
 										<Link to='/basket'>Корзина</Link>
 									</li>
+									<li className='header-nav__item header-nav__item_active'>
+										<Link to='/liked'>Понравившиеся товары</Link>
+									</li>
 								</ul>
 							</nav>
 							<div className='header__login-block login-block'>
